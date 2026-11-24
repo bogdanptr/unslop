@@ -99,7 +99,7 @@ Set uppercase with `text-transform`, or Figma's case setting, never by retyping 
 
 - **Tabular figures** on values that change or align in columns.
 - **Negative tracking only on large text.** -0.02em at 40px and up, -0.01em at 24 and up, none below.
-- **Sentence case** for labels and buttons unless the product's voice documents otherwise. Uppercase or lowercase set with a transform is styling. Turning `Deep Sleep` into `Deep sleep` edits the string, so it is a `relabel` and belongs to `unslop-navigation`: allowed in `full` mode, recorded in the ledger, never applied to data.
+- **Sentence case** for labels and buttons unless the product's voice documents otherwise. Uppercase or lowercase set with a transform is styling. Turning `Open Tasks` into `Open tasks` edits the string, so it is a `relabel` and belongs to `unslop-navigation`: allowed in `full` mode, recorded in the ledger, never applied to data.
 - **No gradient text.** A figure filled with the accent gradient is a tell. Solid color.
 - **No emoji standing in for icons.** Replace an emoji bullet with an icon from the screen's set, or with nothing. Emoji inside user-written content stay.
 - **Balance short headings** with `text-wrap: balance`. Never center text that runs past two lines.

@@ -15,30 +15,30 @@ One row per element that carries information or does something. Decoration with 
 | Action | What it does and where it goes: a route, a handler name, a prototype link. `none` for static content |
 | States | The states the source draws or codes: empty, loading, error, selected, disabled |
 
-A short example, from a sleep app's home screen. The same table is written for any view: on a billing table each column header, each row's fields, each filter and each row action is a row or a grouped row.
+A short example, from a task tracker's home view. The same table is written for any view: on a billing table each column header, each row's fields, each filter and each row action is a row or a grouped row.
 
 | ID | Element | Content | Source | Action | States |
 | --- | --- | --- | --- | --- | --- |
-| C1 | Greeting | `Good morning, Alex` | `user.firstName` | none | |
-| C2 | Score | `82` label `Score` | `sleep.score` | none | loading |
-| C3 | Duration | `7h 42m` label `Last Night's Sleep` | `sleep.durationMin` | none | |
-| C4 | Delta | `24 min vs avg` | `sleep.deltaMin` | none | positive, negative |
-| C5 | Metric | `Deep Sleep` `1h 48m` | `sleep.deepMin` | none | |
-| C9 | Chart | `This Week`, 7 bars M to S, Sunday highlighted, link `View all` | `week[]` | `/stats` | |
-| C10 | Tip | `Sleep Tip` + one sentence | hardcoded | none | |
-| C11 | Primary button | `Start Sleep Tracking` | | `startTracking()` | |
-| C12 | Tab bar | `Home` `Stats` `Sounds` `Journal` `Profile` | | 5 routes | Home selected |
+| C1 | Greeting | `Welcome back, Sam` | `user.firstName` | none | |
+| C2 | Stat | `12` label `Open Tasks` | `tasks.openCount` | none | loading |
+| C3 | Stat | `3` label `Due Today` | `tasks.dueToday` | none | |
+| C4 | Delta | `+2 vs last week` | `tasks.delta` | none | positive, negative |
+| C5 | List row | `Update Pricing Page` `Due Fri` | `tasks[]` | opens the task | done, overdue |
+| C9 | Chart | `This Week`, 7 bars M to S, Friday highlighted, link `View all` | `week[]` | `/reports` | |
+| C10 | Tip | `Pro Tip` + one sentence | hardcoded | none | |
+| C11 | Primary button | `Create New Task` | | `createTask()` | |
+| C12 | Sidebar | `Dashboard` `Tasks` `Calendar` `Reports` `Settings` | | 5 routes | Dashboard selected |
 
 Charts list their data: how many points, what each axis is, which point is highlighted. A chart recorded as "bar chart" cannot be checked later.
 
 ## Rules that hold in every mode
 
-- **Values are verbatim.** `7h 42m` stays `7h 42m`. Splitting it into styled spans is fine. Rounding it, reformatting it to `7.7 h` or changing its unit is not, unless the user asks.
+- **Values are verbatim.** `$1,240.50` stays `$1,240.50`. Splitting it into styled spans is fine. Rounding it, reformatting it to `$1.2k` or changing its unit is not, unless the user asks.
 - **No invented content.** No new metric, testimonial, feature, badge, date or name. Realistic-looking filler is the most damaging kind, because nobody notices it is fake.
-- **Placeholder data stays as it was.** `Alex`, `Lorem ipsum` and sample numbers in the source are the source. Do not improve them.
+- **Placeholder data stays as it was.** `Sam`, `Lorem ipsum` and sample numbers in the source are the source. Do not improve them.
 - **Wrong-looking data is reported, not corrected.** When source values contradict each other, such as an amount that does not match the rate beside it or a total that is not the sum of its rows, carry them over as written and say so in the report. The error may be in the sample data or in your reading.
 - **Derived values are allowed only when computable.** A percentage from two contract values, or a field that already exists in the data model, may be shown. A value that looks plausible but has no source is invented.
-- **Missing data is marked, not faked.** When a new figure needs a value the source lacks, such as a bedtime for a sleep arc, build it with a clearly marked placeholder, list it under **Needs data** and name the field it expects.
+- **Missing data is marked, not faked.** When a new figure needs a value the source lacks, such as a start time for a span, build it with a clearly marked placeholder, list it under **Needs data** and name the field it expects.
 - **Actions keep their destination.** A restyled button calls the same handler. A renamed tab opens the same route.
 - **States survive.** If the source has an empty or error state, the result has one in the new style. A state the source never had is not yours to add; list it as missing.
 - **Images and logos are kept.** Crop, mask and place them freely. Do not replace, regenerate or recolor a logo.
@@ -75,11 +75,11 @@ The contract with a disposition and a location per row. It goes in the report in
 
 | ID | Element | Disposition | Where it is now |
 | --- | --- | --- | --- |
-| C2 | Score `82` | restyle | Chip under the hero arc |
-| C3 | Duration `7h 42m` | keep | Center of the hero |
-| C9 | Weekly chart | demote | Stats tab, which already shows it |
-| C10 | Sleep tip | cut | Filler, hardcoded, no data |
-| C11 | `Start Sleep Tracking` | relabel | `Start`, center of the metric grid, same handler |
+| C2 | Open tasks `12` | restyle | Lead figure in the page header |
+| C3 | Due today `3` | keep | Beside the lead figure |
+| C9 | Weekly chart | demote | Reports view, which already shows it |
+| C10 | Pro tip | cut | Filler, hardcoded, no data |
+| C11 | `Create New Task` | relabel | `New task`, page header, same handler |
 
 A row missing from the ledger is a bug in the reskin, whatever the result looks like.
 
@@ -87,5 +87,5 @@ A row missing from the ledger is a bug in the reskin, whatever the result looks 
 
 - **`Source: unknown` is treated as live data.** A tip that might be hardcoded might also be personalised. If you cannot tell, it is kept or demoted, never cut as filler.
 - **A screenshot contract is a transcription, and transcriptions have errors.** Read the image twice. Record icons, chart shapes and the selected state as well as strings. Mark any character you are not sure of. Leave `Source`, `Action` and `States` as `unknown` instead of dropping the columns.
-- **A demote must point at something you can see.** "The Stats tab already shows the weekly chart" is checkable in a codebase or a multi-frame file. From one screenshot it is an assumption. Apply it only when the source itself points there, such as a `View all` link beside the chart, and list it under **Assumed** in the report so the user can confirm.
-- **Changing an interface label's capitalization is a `relabel`.** `Deep Sleep` to `Deep sleep` changes the string. Uppercase or lowercase applied with a case transform leaves the string as written and is styling.
+- **A demote must point at something you can see.** "The Reports view already shows the weekly chart" is checkable in a codebase or a multi-frame file. From one screenshot it is an assumption. Apply it only when the source itself points there, such as a `View all` link beside the chart, and list it under **Assumed** in the report so the user can confirm.
+- **Changing an interface label's capitalization is a `relabel`.** `Open Tasks` to `Open tasks` changes the string. Uppercase or lowercase applied with a case transform leaves the string as written and is styling.

@@ -21,7 +21,7 @@ Documented brand colors are fixed. Build the atmosphere around them. Semantic co
 
 A generated screen picks a background from a short list of defaults and then adds an accent. Do it the other way round. Build the background from the brief's atmosphere, then take every other color from it.
 
-The atmosphere stands for something in the product: the paper of a ledger, the dark of a cockpit, the sky the user wakes up to. It is one of four kinds, listed from the most common to the least:
+The atmosphere stands for something in the product: the paper of a ledger, the dark of a cockpit, the sky outside right now. It is one of four kinds, listed from the most common to the least:
 
 | Kind | What it is | When |
 | --- | --- | --- |

@@ -31,7 +31,7 @@ The catalog. Each tell has what it looks like, how to find it in code and in Fig
 | Sidebar of everything | Ten or more navigation items, each with an icon, the first called Dashboard | A `navItems` array of ten or more entries | A sidebar with ten or more rows | `unslop-navigation` |
 | A card around every form group | Each group of two or three fields sits in its own bordered card with a title and a description | `Card` with `CardHeader` and `CardContent` repeated down a settings page | Stacked bordered frames each holding a few fields | `unslop-surfaces` |
 | Five tabs because five fit | A full tab bar with vague names: Home, Explore, Profile | Five or more tab routes; a tab named `Home` | A tab bar with five items | `unslop-navigation` |
-| Greeting as headline | "Good morning, Alex" or "Welcome back" is the largest text on the screen | The greeting in the `h1` | The largest text layer is the greeting | `unslop-layout` |
+| Greeting as headline | "Good morning, Sam" or "Welcome back" is the largest text on the screen | The greeting in the `h1` | The largest text layer is the greeting | `unslop-layout` |
 | Section header on every section | Each block has a title and a "View all" link | A repeated `SectionHeader` with a title and a link | A title and link row above every group | `unslop-layout` |
 
 ## Tier 3: detail
@@ -58,7 +58,7 @@ The catalog. Each tell has what it looks like, how to find it in code and in Fig
 | Mixed corner languages | Pills and circles beside rounded rectangles: a pill search bar over a rounded-rectangle bar, circular icon buttons beside rounded-square tiles | `rounded-full` and `rounded-xl` or `rounded-2xl` on sibling controls and containers | Fully round frames and partly rounded frames among the same kind of element | `unslop-surfaces` |
 | Radius drift | 8, 10, 12, 16 and 20 all in use | More than three distinct `rounded-*` values in one view | More than three corner radius values on one frame | `unslop-surfaces` |
 | Spacing drift | Gaps of 10, 12, 14, 16, 18 with no pattern | Arbitrary values such as `gap-[14px]`, `mt-[18px]` | Auto-layout gaps that are not on a 4px grid | `unslop-layout` |
-| Title Case Everywhere | Every label capitalized like a headline | `Billing History`, `Start Sleep Tracking`, `Create New Project` | The same | `unslop-navigation`, as a `relabel` |
+| Title Case Everywhere | Every label capitalized like a headline | `Billing History`, `Start New Workout`, `Create New Project` | The same | `unslop-navigation`, as a `relabel` |
 | Gradient text | A heading filled with the accent gradient | `bg-clip-text text-transparent bg-gradient-to-r` | A text layer with a gradient fill | `unslop-typography` |
 | Pure black or white on color | `#000` or `#FFF` text and shadows over a tinted background | `text-white`, `#000000` shadows | `#FFFFFF` and `#000000` fills on a colored frame | `unslop-color` |
 

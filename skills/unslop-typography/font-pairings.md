@@ -75,6 +75,6 @@ Always keep a fallback stack. Load only the weights the screen uses.
 - Line height as a percentage: 100 for the hero figure, 140 for body.
 - Set case with the text layer's case setting, so the characters stay as written.
 - Turn on tabular figures in the type details panel for changing values.
-- A text layer can carry mixed styles, so the value and unit in `7h 42m` can stay one layer with two sizes. Keep it one layer when you can. The string then remains intact for checking.
+- A text layer can carry mixed styles, so the value and unit in `1h 24m` can stay one layer with two sizes. Keep it one layer when you can. The string then remains intact for checking.
 - Before changing characters or style through the Plugin API, the font must be loaded for that layer, including every font in a mixed-style layer.
 - Where the file has text styles, restyle through them or create a small set of new ones named by role. Do not leave every layer with local overrides.

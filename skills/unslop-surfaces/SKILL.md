@@ -79,7 +79,7 @@ An icon in a tinted rounded square, one hue per metric, is the most recognizable
 
 A leading mark on a list row is a different thing. Where rows are scanned by their first element, such as bills, files, contacts or transactions, each row may open with a small mark in a container: all containers the same size, shape and neutral fill, all icons the same single color. What makes the tile a tell is one hue per item and a tile on every label. One neutral style on rows that are scanned is a list.
 
-Never swap an icon for a different meaning. A moon stays a moon.
+Never swap an icon for a different meaning. A bell stays a bell.
 
 ## Controls of one kind share one treatment
 
@@ -96,7 +96,7 @@ Where `unslop-direction` names a full-strength object, its surface can carry a p
 
 | Subject | Pattern |
 | --- | --- |
-| Money, documents of value | Engraved line work: a rosette of fine overlapping curves |
+| Money, documents of value | Engraved line work, as on a banknote or a certificate |
 | Terrain, travel, routes | Contour lines or a faint map grid |
 | Instruments, measurement | A ruled grid or tick marks |
 | Sound, signal | A waveform or concentric rings |

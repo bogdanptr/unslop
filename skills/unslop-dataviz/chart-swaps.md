@@ -18,10 +18,10 @@ Generic forms and what to draw instead, by the story the data tells. Each entry 
 
 ## Drawing a span as an arc
 
-The sleep example, as SVG. The arc is always the same shape. Its ends carry the two times.
+A span between two moments, as SVG. The arc is always the same shape. Its ends carry the two times.
 
 ```html
-<svg viewBox="0 0 320 200" role="img" aria-label="Slept 7h 42m, from 11:24 PM to 7:06 AM">
+<svg viewBox="0 0 320 200" role="img" aria-label="Shift of 8h 15m, from 9:00 AM to 5:15 PM">
   <defs>
     <linearGradient id="span" x1="0" x2="1">
       <stop offset="0" stop-color="var(--arc-start)" />
@@ -45,7 +45,7 @@ When the arc shows a span, its shape is fixed and the labels carry the data. Whe
 ## Drawing a level on a scale
 
 ```html
-<div class="scale" role="img" aria-label="Resting heart rate 58 bpm, usual range 55 to 62">
+<div class="scale" role="img" aria-label="Response time 58 ms, usual range 55 to 62">
   <div class="scale-band"   style="inset-inline-start: 37.5%; inline-size: 17.5%"></div>
   <div class="scale-marker" style="inset-inline-start: 45%"></div>
 </div>
@@ -56,7 +56,7 @@ Positions are `(value − min) ÷ (max − min)`. With a scale of 40 to 80, a va
 ## Drawing parts as one bar
 
 ```html
-<div class="parts" role="img" aria-label="Deep 1h 48m, REM 1h 31m, light 4h 11m, awake 12m">
+<div class="parts" role="img" aria-label="Photos 108 GB, apps 91 GB, documents 251 GB, other 12 GB">
   <span style="flex: 108"></span>
   <span style="flex: 91"></span>
   <span style="flex: 251"></span>
@@ -66,7 +66,7 @@ Positions are `(value − min) ÷ (max − min)`. With a scale of 40 to 80, a va
 
 Use the raw values as `flex` weights so proportions are exact. Gap 2 between segments, round the outer ends only. Steps of one hue from the palette, darkest for the first part, not one hue per part.
 
-Only draw parts of a whole when the parts sum to the whole. Four sleep stages that sum to the night can be one bar. Four unrelated stats cannot.
+Only draw parts of a whole when the parts sum to the whole. Four kinds of file that sum to the used storage can be one bar. Four unrelated stats cannot.
 
 ## In Figma
 

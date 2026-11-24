@@ -46,7 +46,7 @@ The new entry point has to be on a view in scope, where it can be built and chec
 - **One or two words**, a noun the user would say aloud.
 - **Name the content, not the container.** `Today`, `Invoices`, `Inbox` say what is there. `Home`, `Dashboard` and `Overview` say only that it is first.
 - **No pairs that overlap.** `Stats` beside `Insights`, `Profile` beside `Account`, `Settings` beside `Preferences` each force a guess.
-- **Sentence case**, set as text and not with an uppercase transform. This applies to every interface label, not only navigation: `Deep Sleep` becomes `Deep sleep`, `Billing History` becomes `Billing history`. Each change is a `relabel` in the ledger. Skip it in `reskin` mode and for product names.
+- **Sentence case**, set as text and not with an uppercase transform. This applies to every interface label, not only navigation: `Open Tasks` becomes `Open tasks`, `Billing History` becomes `Billing history`. Each change is a `relabel` in the ledger. Skip it in `reskin` mode and for product names.
 - **Keep product nouns.** If the product calls it a Journal or a Workspace everywhere, that is its name.
 
 Record every rename as `relabel` with the old name. A renamed item opens the same route.
@@ -79,10 +79,10 @@ Record every rename as `relabel` with the old name. A renamed item opens the sam
 ## Buttons say the action in as few words as it takes
 
 - A verb, one or two words. `Start`, `Save`, `Add entry`, `Send invoice`.
-- Drop words the view already supplies. On a sleep screen with one action, `Start Sleep Tracking` is `Start`. On an invoice, `Send This Invoice Now` is `Send`.
+- Drop words the view already supplies. On a workout screen with one action, `Start New Workout` is `Start`. On an invoice, `Send This Invoice Now` is `Send`.
 - A shortened label must still make sense where the button sits. `Start` alone in a toolbar with five other controls is not clear.
 - Keep the full phrase when the short one is ambiguous, when two actions sit together or when the action is destructive. `Delete` beside `Delete account` is not a saving.
-- The accessible name stays specific. A button that shows `Start` keeps an accessible label such as `Start sleep tracking`.
+- The accessible name stays specific. A button that shows `Start` keeps an accessible label such as `Start workout`.
 - Marketing actions name what happens next: `Start free trial`, `Book a demo`. `Get started` and `Learn more` say nothing.
 - Links such as `View all` become the destination's name, once per view at most.
 

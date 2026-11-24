@@ -61,7 +61,7 @@ Writing rules:
 - Write for an agent with no context. Say what to do and give the value.
 - Explain why once, briefly, where the reason changes how the rule is applied.
 - **Every rule is general.** It must hold for a phone summary screen, a desktop dashboard, a settings form and a landing page, or say which kinds of screen it applies to, using the kinds defined in `unslop-direction`. A rule that only makes sense for one product does not belong in a skill.
-- **Examples vary.** Draw them from different products and kinds of screen, so no skill reads as a recipe for one app. Two cases recur and keep their values: a sleep summary (`82`, `7h 42m`, `24 min vs avg`, `1h 48m`, `1h 31m`, `58 bpm`, `12 min`) and an invoicing dashboard. Never let one case supply every example in a skill.
+- **Examples vary and belong to no one.** Draw them from different products and kinds of screen, so no skill reads as a recipe for one app. Do not name or describe a specific design this collection was built or tested on. An example is a generic product type with invented values, and no single case supplies more than one or two examples in a skill.
 - A principle with no test and a rule with no value are both unfinished. Fundamentals go in `unslop-principles` with a test. Values go in the pass skill that owns them.
 - Any color value published here is computed, not estimated. Contrast ratios in `unslop-color` and `unslop-surfaces` were calculated from the listed values. Recompute them when a value changes.
 - Reference files carry recipes and tables. They do not restate the principle, and the principle does not summarize the recipe.

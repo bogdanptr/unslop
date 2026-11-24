@@ -97,15 +97,15 @@ Content parity: <n> of <n> contract rows accounted for. <blockers, or "none">
 
 | Severity | Finding | Where | Evidence | Owner |
 | --- | --- | --- | --- | --- |
-| Blocker | Deep sleep value changed | Metric grid | Contract `1h 48m`, result `1h 46m` | `unslop` contract |
-| Blocker | Label contrast fails | `REM` label over the sunrise band | 2.3:1, needs 4.5:1 | `unslop-color` |
-| Finding | Tinted icon tiles remain | Tab bar | 36px tinted circle behind the selected icon | `unslop-navigation` |
+| Blocker | Invoice total changed | Invoice table, row 3 | Contract `$1,240.50`, result `$1,240.00` | `unslop` contract |
+| Blocker | Label contrast fails | `Due date` label over the bright band of the header | 2.3:1, needs 4.5:1 | `unslop-color` |
+| Finding | Saturated pill behind the selected item | Sidebar | 36px accent circle behind the selected icon | `unslop-navigation` |
 
 Measured: <pairs with ratios>
 Not verified: <checks that could not be run, and why>
 ```
 
-`Ship` means no blockers, every tier 1 tell gone and nothing in the result that the brief's **Avoid** line names. `Fix first` otherwise. A pattern from the catalog that the brief's atmosphere or subject explains, such as a violet night sky in a sleep app, is not a surviving tell: say so in one line and move on.
+`Ship` means no blockers, every tier 1 tell gone and nothing in the result that the brief's **Avoid** line names. `Fix first` otherwise. A pattern from the catalog that the brief's atmosphere or subject explains, such as a violet evening sky in a weather app, is not a surviving tell: say so in one line and move on.
 
 Counting rules, so two readers get the same answer: a unit span sized relative to its figure does not count as a type size. Fully round shapes count as a corner language, checked separately: a view mixes pills or circles with rounded rectangles only where a shape is round by nature, such as a status dot. The device frame does not count as radius values. The hero's own marks may carry the accent and do not count as the one data highlight. Order rows with blockers first, then findings by how visible they are. Cap findings at ten. Never cap blockers.
 

@@ -1,4 +1,4 @@
-<img alt="A generic AI-generated wallet screen before, and the same screen after unslop" src="assets/cover.png" />
+<img alt="A generic AI-generated screen before, and the same screen after unslop" src="assets/cover.png" />
 
 # Unslop
 
@@ -115,10 +115,6 @@ Three modes:
 | `reskin` | Look only. Same elements, same labels, same navigation |
 | `audit` | Nothing. Reports what makes the screen look generated |
 
-## Example
-
-The cover above is a wallet screen from a screenshot: same balance, same actions, same tabs, new screen. [examples/sleep](examples/sleep) is a full run on another generated screen, a mobile summary view: the original, the result, the report and what verification caught. It is one case, not the template. A dashboard or a form comes out flat, dense and quiet.
-
 ## Skills
 
 ### Run the whole thing
@@ -173,7 +169,7 @@ Each skill works on its own. The orchestrator is the reason to install all of th
 ## What it will not do
 
 - **Invent content.** No new metrics, names, dates or testimonials. If a new hero needs data the screen does not have, it draws a marked placeholder and tells you which field is missing.
-- **Change values.** `7h 42m` stays `7h 42m`.
+- **Change values.** `$1,240.50` stays `$1,240.50`.
 - **Lose things silently.** Whatever is cut, merged or moved appears in the ledger with where it went.
 - **Edit your original.** Figma work goes on a copy, code work on a branch.
 - **Touch behavior.** No changes to data fetching, state, routing or logic.
@@ -188,15 +184,6 @@ Three roles run better in their own context, and ship as Claude Code agents in [
 - **unslop-critic** verifies the result without having watched the work.
 
 In other harnesses, the orchestrator spawns general agents with the same briefs, or runs the roles in sequence. See [subagents.md](skills/unslop/subagents.md).
-
-## Credits
-
-The structure of this collection, one folder per skill, an orchestrator over domain skills, exact values and a detection table in each, is modeled on two sets of skills worth installing alongside it:
-
-- [emilkowalski/skills](https://github.com/emilkowalski/skills) by Emil Kowalski, for motion and design engineering.
-- [jakubkrehel/skills](https://github.com/jakubkrehel/skills) by Jakub Krehel, for typography, color, layout, accessibility and UI polish.
-
-Unslop covers restyling. For animation, accessibility review and deep typographic or color-system work, use theirs.
 
 ## License
 

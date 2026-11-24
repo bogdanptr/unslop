@@ -46,7 +46,7 @@ On a focus view the brief may name a figure as the signature. The default for an
 
 | Subject | Its own shape | Instead of |
 | --- | --- | --- |
-| A night's sleep | An arc from bedtime to wake time | A score ring |
+| A shift, a session or a trip | A span from its start to its end, with the two times at the ends | A score ring |
 | A day's activity | The day as a horizontal strip with active stretches filled | Three nested rings |
 | A monthly budget | A bar that drains across the month, with today marked | A donut of categories |
 | A run or ride | The route line, or its elevation profile | A distance stat card |
@@ -75,7 +75,7 @@ Never fill the gap with a plausible number. A made-up `11:24 PM` looks exactly l
 ## Numbers lead, units step back
 
 - **Value** in the primary tone. A large figure is light in weight. Sizes and weights come from `unslop-typography`.
-- **Unit** attached to its value, smaller and in a lighter tone, on the same baseline. In a large figure the unit is 50 to 60 percent of the value's size. `7h 42m` is four spans: `7`, `h`, `42`, `m`. A currency symbol and the decimals of a large amount step back the same way.
+- **Unit** attached to its value, smaller and in a lighter tone, on the same baseline. In a large figure the unit is 50 to 60 percent of the value's size. `1h 24m` is four spans: `1`, `h`, `24`, `m`. A currency symbol and the decimals of a large amount step back the same way.
 - **Label** above or below at caption size, in the secondary tone. One label style for every figure on the view.
 - **Tabular figures** on anything that updates or sits in a column.
 - **Consistent precision.** Every value of one kind shows the same number of decimals. The contract value is what is shown: restyle its parts, never round or reformat it.

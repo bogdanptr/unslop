@@ -10,7 +10,7 @@ Stops run top to bottom.
 | --- | --- | --- |
 | Dawn | `oklch(0.66 0.10 285)` `#8C89CD` at 0%, `oklch(0.78 0.08 40)` `#E5A691` at 42%, `oklch(0.74 0.13 60)` `#E6964F` at 62%, `oklch(0.30 0.05 50)` `#422616` at 100% | Waking, starting, morning summaries |
 | Dusk | `oklch(0.30 0.09 280)` `#262659` at 0%, `oklch(0.50 0.14 340)` `#953D7C` at 55%, `oklch(0.74 0.13 50)` `#EC915C` at 100% | Winding down, evening, endings |
-| Night | `oklch(0.16 0.03 265)` `#070D1A` at 0%, `oklch(0.24 0.06 275)` `#171C3B` at 60%, `oklch(0.32 0.08 290)` `#332A58` at 100% | Sleep, focus, quiet |
+| Night | `oklch(0.16 0.03 265)` `#070D1A` at 0%, `oklch(0.24 0.06 275)` `#171C3B` at 60%, `oklch(0.32 0.08 290)` `#332A58` at 100% | Rest, focus, quiet |
 | Deep water | `oklch(0.20 0.05 235)` `#001929` at 0%, `oklch(0.36 0.06 215)` `#084551` at 60%, `oklch(0.54 0.09 195)` `#0B7F7F` at 100% | Calm, depth, breathing |
 | Forest | `oklch(0.20 0.03 160)` `#091A11` at 0%, `oklch(0.33 0.06 150)` `#1C3E24` at 55%, `oklch(0.50 0.08 135)` `#4F6D3E` at 100% | Outdoors, growth, slow habits |
 | Ember | `oklch(0.18 0.02 30)` `#1A0E0C` at 0%, `oklch(0.30 0.07 35)` `#4B1F14` at 55%, `oklch(0.55 0.15 45)` `#B64E10` at 100% | Energy, training, heat |
@@ -58,7 +58,7 @@ What follows from the numbers:
 
 Run the same table for any gradient before placing text, then measure again once the layout exists.
 
-In a test run on a 390 by 844 screen, this recipe put an 11px overline and the arc's end labels on the transition into the bright band, where secondary text measured 2.6:1 to 3.1:1. The fix was to the background, not the text: a darker night at the top, `oklch(0.34 0.09 280)` then `oklch(0.47 0.11 295)` at 40 percent, with the sunrise pushed down to 55 to 65 percent so it sits behind the glass tiles. Everything then passed 4.5:1 with secondary text at 84 percent strength and the dark glass at 0.55. A real pre-dawn sky is dark overhead, so the fix also made the atmosphere more accurate.
+A common failure with this recipe is small secondary text landing on the transition into the bright band, where it measures under 3:1. Fix the background, not the text: darken the top stops and move the bright band down so it sits behind surfaces instead of behind labels.
 
 ## Computing contrast
 

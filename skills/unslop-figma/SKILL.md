@@ -50,12 +50,12 @@ With the official server, writes go through `use_figma`, which runs Plugin API c
 ## 4. Edit in ways a designer can keep using
 
 - **Keep text as text.** Change a text layer's style, not its characters. Never outline, flatten or rasterize text. When the Plugin API changes a text layer, load every font the layer uses first, or the call fails.
-- **Split styling, not layers, where possible.** `7h 42m` with a smaller unit can stay one text layer with mixed sizes. That keeps the string intact for the contract check.
+- **Split styling, not layers, where possible.** `1h 24m` with a smaller unit can stay one text layer with mixed sizes. That keeps the string intact for the contract check.
 - **Move layers, do not retype them.** When the structure changes, build the new frames and move the existing text layers into them. A moved layer keeps its id and its characters, so the contract check stays a comparison of ids. Create a new text layer only for a marked placeholder.
 - **Use auto layout.** Express spacing as gap and padding on auto layout frames, on the spacing scale. Do not position by absolute x and y inside a layout. The one exception is an element that deliberately overlaps a group, such as an action at the center of four tiles: make it a child of the group with absolute positioning and center constraints, so it follows the group when the group resizes.
 - **Bind to variables and styles.** If the file has color or spacing variables, bind to them and add the new roles as variables in a collection named for the restyle. If it has none, create a small set: the color roles, the radius, the spacing steps. Leave no raw hex on text.
 - **Respect components.** Restyle an instance through its properties or overrides. Change a main component only when it lives in this file and the change is meant for every use. Never detach an instance to edit it. If the design cannot be reached through the component, build that piece from plain frames in the copy and note it.
-- **Name what you make.** `Hero / arc`, `Metric / deep sleep`, not `Frame 427`. A layer that encodes a value carries the value in its name. An imported SVG arrives with children named `Vector`: name those too.
+- **Name what you make.** `Header / page title`, `Stat / open invoices`, not `Frame 427`. A layer that encodes a value carries the value in its name. An imported SVG arrives with children named `Vector`: name those too.
 - **Delete what is cut.** Removed elements are deleted from the copy, not hidden. The ledger and the untouched original are the record.
 - **Keep images.** Reuse the source's image fills. Do not replace or regenerate them.
 

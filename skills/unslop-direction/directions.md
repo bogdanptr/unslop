@@ -27,7 +27,7 @@ The background is the sky or the light of a time of day, and the interface float
 | Material | Glass, one level |
 | Accent source | The warmest or brightest stop of the gradient |
 
-Fits sleep, weather, meditation, habits, travel. Does not fit dense tables or long reading. Text contrast is the main risk, since a sky has light regions and dark ones.
+Fits weather, meditation, habits, travel. Does not fit dense tables or long reading. Text contrast is the main risk, since a sky has light regions and dark ones.
 
 ## Instrument
 

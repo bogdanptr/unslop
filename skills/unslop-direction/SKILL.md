@@ -13,7 +13,7 @@ It decides and stops. `unslop-layout`, `unslop-dataviz`, `unslop-typography`, `u
 
 A generic screen has no idea behind it, so each part falls back to a default. Giving it better defaults produces a more expensive-looking generic screen. What makes a design read as designed is that the parts agree with each other, and they agree because they come from one source.
 
-That source is the product's own subject. A sleep app is about the night turning into morning. A billing tool is about money owed and money paid. A code review tool is about a diff. A reading app is about a page. When the background, the main element and the colors come from that subject, nobody needs to be told the screen was considered.
+That source is the product's own subject. A weather app is about the sky over the next few hours. A billing tool is about money owed and money paid. A code review tool is about a diff. A reading app is about a page. When the background, the main element and the colors come from that subject, nobody needs to be told the screen was considered.
 
 A direction that could be handed unchanged to a product in another category is not a direction. "Clean, modern, minimal" describes every screen that was ever sloppy.
 
@@ -21,9 +21,9 @@ How loud the idea is depends on the kind of screen. On most product interfaces i
 
 ## 1. Say what the product is about
 
-Write one line, in plain words, with a noun the user would recognize: *a night's sleep, from going to bed to waking up*, or *invoices: what is owed, by whom, since when*. Take it from the content contract, the product's own copy and its data, not from its category.
+Write one line, in plain words, with a noun the user would recognize: *today's weather, hour by hour*, or *invoices: what is owed, by whom, since when*. Take it from the content contract, the product's own copy and its data, not from its category.
 
-Then name the view's job as a question the user arrives with: *how did I sleep?*, *who has not paid?*, *is this plan right for my team?* Everything on the view supports that question or leaves.
+Then name the view's job as a question the user arrives with: *do I need a coat?*, *who has not paid?*, *is this plan right for my team?* Everything on the view supports that question or leaves.
 
 ## 2. Say what kind of screen it is
 
@@ -55,7 +55,7 @@ Pick the kind of thing the subject is. This decides what the look is made of:
 
 | The subject is | The look comes from | Example products |
 | --- | --- | --- |
-| A time or a cycle | The sky or light at that time | Sleep, weather, calendars, habits |
+| A time or a cycle | The sky or light at that time | Weather, calendars, habits, energy use |
 | A place or a journey | Terrain, maps, horizon | Travel, running, delivery, logistics |
 | A physical thing | Its material: paper, metal, card stock, fabric | Reading, notes, banking cards, audio gear, tickets |
 | An instrument or a measure | Dials, grids, precision, mono type | Finance, analytics, monitoring, developer tools |
@@ -82,7 +82,7 @@ The signature is the thing a viewer would describe afterwards. One per product, 
 
 | Kind | Where the signature usually is |
 | --- | --- |
-| Focus | The form of the main figure: an arc for a night, a route line for a run, a card for an account |
+| Focus | The form of the main figure: a curve for a day's weather, a route line for a run, a card for an account |
 | Work | How figures and tables are set: a mono for numbers, a distinctive table rhythm, one chart style used everywhere |
 | Form | The controls and the type: a field style, a section rhythm, a heading face |
 | Collection | The item: its crop, its caption style, its hover or selected state |
@@ -106,7 +106,7 @@ On those kinds, one object carries the idea at full strength and everything arou
 
 Strength is concentrated, never spread. One object at full strength reads as confident. Three at medium strength read as busy.
 
-Write it in the brief as one more line: `Strength: the balance card. Brand blue field, engraved rosette, serif figures. Everything else on paper.` On work, form and collection views the line is `Strength: none. The idea is in the type and the figures.`
+Write it in the brief as one more line: `Strength: the forecast header. The sky as a field, the day's temperature curve, large light figures. Everything below it on plain surfaces.` On work, form and collection views the line is `Strength: none. The idea is in the type and the figures.`
 
 ## 6. Write the brief
 
@@ -130,18 +130,18 @@ Avoid: stat cards with tinted icon tiles, indigo accent on gray-50, a card aroun
 The same structure on a focus screen:
 
 ```markdown
-About: a night's sleep, from going to bed to waking up
-The view's job: how did I sleep?
+About: today's weather, hour by hour
+The view's job: do I need a coat?
 Kind: focus
 Fixed: nothing documented
 
-Atmosphere: the sky before sunrise, cool at the top warming to the horizon. It is the morning the user wakes into
-Signature: an arc from bedtime to wake time, moon at one end, sun at the other, duration at its center
+Atmosphere: the sky as it is now, from its color overhead to its color at the horizon
+Signature: the day's temperature drawn as one curve, with the current hour marked on it
 Type voice: soft geometric sans, large figures at light weight
 Material: glass over the sky, one level, no borders
-Accent source: the warmest stop of the sunrise, used on the one primary action
+Accent source: the warmest stop of the sky, used on the current hour and the one primary action
 
-Avoid: a ring around the score, an indigo accent on navy, tinted icon tiles
+Avoid: an icon and a number in a card, an indigo accent on navy, tinted icon tiles
 ```
 
 Every line is a decision someone could check a screen against. Close with the three tier 1 tells from the diagnosis as an **Avoid** line, so no pass drifts back to them. Name the default, not the raw property: `indigo accent on navy`, not `indigo`. A bare hue in the Avoid line will collide with an atmosphere that legitimately contains it.
