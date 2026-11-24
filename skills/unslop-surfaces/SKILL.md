@@ -26,7 +26,7 @@ For the containers that stay, separate them from the background **one way**:
 | Method | Use it when | Value |
 | --- | --- | --- |
 | Space alone | The group is obvious from proximity | No fill, no stroke |
-| A fill step | The background is flat | Dark: surface 4 to 6 percent lighter than the page in OKLCH lightness. Light: white on a page at about 96 to 97 percent lightness |
+| A fill step | The background is flat | Dark: surface 4 to 6 percent lighter than the page in OKLCH lightness. Light: white, or the raised step, on a page whose lightness `unslop-color` sets |
 | A translucent fill | The background is a gradient or image | See **The material goes on last** |
 | A hairline | Rows in a list or a table, or a flat direction that uses rules | 1px at 8 to 12 percent of the text color |
 
@@ -73,7 +73,8 @@ An icon in a tinted rounded square, one hue per metric, is the most recognizable
 
 - The icon sits inline with its label, on the same baseline, 4 to 8 apart.
 - Size is 1 to 1.25 times the label's font size. Beside a 13px label, a 14 or 16 icon.
-- Stroke is 1.5px beside regular text, 2px beside medium or semibold. One icon set for the whole screen.
+- Stroke is 1.5px beside regular text, 2px beside medium or semibold.
+- **Every icon is a real file from one published set.** Never draw an icon from memory. Use the project's set when it has one, otherwise choose one open-source set, fetch each icon's SVG and place it inline with `currentColor`. Which sets, their licences, the package names and the file addresses are in [icons.md](icons.md).
 - Color is the label's color, or the single accent when the icon marks something active. Not one hue per item.
 - Where the label already says it, consider whether the icon is needed. An icon that repeats its label is decoration.
 
@@ -111,14 +112,14 @@ Where `unslop-direction` names a full-strength object, its surface can carry a p
 
 ## Shadows are soft, tinted and rare
 
-- A shadow is for an element that floats over other content: a sheet, a menu, a floating button, a floating bar. A card resting on the page does not need one.
+- A shadow is for an element that floats over other content: a sheet, a menu, a floating button, a floating bar. A card resting on the page does not need one. The one exception is the surface that holds the view's focal region: on a light page where the fill step alone is faint, it may take the soft two-layer shadow at the low end of its range. No other resting surface does.
 - Build it from two layers at low opacity, such as `0 1px 2px` at 6 percent and `0 8px 24px` at 8 percent, in a dark tone of the background's hue. Never pure black on a colored background.
 - No colored glow under buttons. Delete any shadow in the accent color with a blur above 12.
 - On dark flat backgrounds shadows do nothing. Use a fill step.
 
 ## Buttons are solid
 
-- The primary button is a solid fill of the accent with the on-accent text color. Remove gradients from buttons.
+- The primary button is a solid fill of the accent with the on-accent text color. Remove gradients from buttons. On an accent field the fill and label swap, following `unslop-color`.
 - One filled button per view. Secondary actions are a quiet fill at the surface color or a hairline outline, and tertiary ones are plain text. Three levels at most.
 - One height per level of density: 44 to 52 on a phone, 32 to 40 on desktop. A button and the input beside it are the same height.
 - A circular or pill primary button is a good fit when the label is one short word. Minimum touch target 44 by 44 on touch screens.
@@ -206,6 +207,9 @@ The Figma version and the light-background variant are in [glass.md](glass.md).
 | An icon wrapped in a tinted square or circle | Remove the wrapper, set the icon inline with its label |
 | A bare icon button beside icon buttons that have a container, or an avatar at a different size from the buttons beside it | One treatment and one size for the row |
 | Sibling icons in different hues with no meaning behind the hues | One color, the label's |
+| An icon whose path was written by hand, or icons with uneven stroke and corner styles | Replace each with the real file from the chosen set |
+| Icons from two sets in one view | One set |
+| An icon loaded from a CDN link in the result | Inline the SVG |
 | More than three radius values on the screen | Reduce to the family |
 | `rounded-full`, `999px` or `50%` on controls in a view whose containers are rounded rectangles, or the reverse | One corner language for the view |
 | A circular avatar or icon button beside rounded-square controls | The family's inner radius |

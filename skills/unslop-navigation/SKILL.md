@@ -37,6 +37,8 @@ A generated navigation has as many items as fit. Each item is a promise that the
 - **Account, profile and settings** share one destination.
 - **Two navigations for the same level** is one too many. A sidebar and a top bar that both list sections: keep one for sections, give the other to context such as the workspace, search and the account.
 
+When the run covers one view and the other destinations cannot be seen, reducing the list is out of reach. Group it instead: 3 groups at most, ordered by how often each is used, with a short group heading where a heading names what the items already are, such as `Operations` or `Account`. A group heading is new interface text, so record it under **Added**. Propose the merges and demotions in the report.
+
 For every item removed, write the ledger row: what it was, where its entry point now lives. If you cannot name the new entry point, the item stays.
 
 The new entry point has to be on a view in scope, where it can be built and checked. When the only home for an item is a view outside this run, keep the item and list the removal under **Proposed, not applied**.
@@ -44,9 +46,9 @@ The new entry point has to be on a view in scope, where it can be built and chec
 ## Names that say what is there
 
 - **One or two words**, a noun the user would say aloud.
-- **Name the content, not the container.** `Today`, `Invoices`, `Inbox` say what is there. `Home`, `Dashboard` and `Overview` say only that it is first.
+- **Name the content, not the container.** `Today`, `Invoices`, `Inbox` say what is there. `Home`, `Dashboard` and `Overview` say only that it is first. When nothing in the view says what the first place holds, keep its name and propose the rename.
 - **No pairs that overlap.** `Stats` beside `Insights`, `Profile` beside `Account`, `Settings` beside `Preferences` each force a guess.
-- **Sentence case**, set as text and not with an uppercase transform. This applies to every interface label, not only navigation: `Open Tasks` becomes `Open tasks`, `Billing History` becomes `Billing history`. Each change is a `relabel` in the ledger. Skip it in `reskin` mode and for product names.
+- **Sentence case**, set as text and not with an uppercase transform. This applies to every interface label, not only navigation: `Open Tasks` becomes `Open tasks`, `Billing History` becomes `Billing history`. Each change is a `relabel` in the ledger. Skip it in `reskin` mode and for product names. A string that is also a data value, such as a status or a category that appears in rows, keeps the data's capitalization everywhere it appears, including where it is used as a label.
 - **Keep product nouns.** If the product calls it a Journal or a Workspace everywhere, that is its name.
 
 Record every rename as `relabel` with the old name. A renamed item opens the same route.
@@ -56,7 +58,7 @@ Record every rename as `relabel` with the old name. A renamed item opens the sam
 - Every item shows a label. Icon-only navigation saves a few pixels and costs comprehension. An icon-only collapsed sidebar is fine when it expands and each icon has a tooltip.
 - The selected item is marked by full-strength text and, where there are icons, a filled variant. Inactive items sit at about 55 to 65 percent.
 - A capsule behind the selected item is a good third signal when it is quiet: the accent at 8 to 10 percent over the bar's surface, or one fill step, covering the icon and the label together, with the bar's radius minus its padding. The icon and label inside may take the accent. A saturated accent pill behind the icon alone, a glow, or accent color with no change of shape is not.
-- One icon set, the same one the rest of the interface uses. In a sidebar, drop the icons entirely when the labels are clear and the list is short. A column of twelve icons nobody can tell apart is decoration.
+- One icon set, the same one the rest of the interface uses. Where the source had an icon or an emoji on each item, each item gets an icon from the set, fetched as a real file following `unslop-surfaces`. The selected item uses the same icon's filled variant where the set has one. Drop the icons only when the source had none.
 - Counts and badges appear only where a number is waiting for the user. A badge on every item is noise.
 
 ## The navigation belongs to the screen

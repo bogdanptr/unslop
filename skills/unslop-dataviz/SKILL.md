@@ -27,7 +27,7 @@ Generated charts are whatever the library renders first. Choose the form from wh
 | --- | --- | --- |
 | A value over time | A line. An area only for a single series whose volume matters | Bars for a long continuous series |
 | Values across a few categories | Horizontal bars, sorted, labeled directly | A pie, a donut, vertical bars with rotated labels |
-| Parts of one whole, 2 to 4 parts | One segmented bar | A donut with a legend |
+| Parts of one whole, 2 to 4 parts | One segmented bar. When a part is under 10 percent and cannot carry its own label, a short ranked list of labeled bars | A donut with a legend |
 | One value against a target or a limit | A bar with the target marked, or the figure with the limit beside it | A ring, a gauge |
 | One value against its usual range | A range strip with a marker | A colored badge |
 | Two measures of the same things | A scatter, or a table with both columns | Two charts side by side |
@@ -87,7 +87,7 @@ The split is styling only. The string stays whole to a screen reader and in the 
 A comparison such as `24 min vs avg` or `+12.4%` does not need a colored pill.
 
 - Set it as plain text or a small neutral chip in the secondary tone, with a simple arrow for direction.
-- Use color only when direction is the point and the meaning is unambiguous, and then on the arrow or the text, not as a tinted background. Always keep the arrow, a sign or a word, so color is never the only signal.
+- Use color only when direction is the point and the meaning is unambiguous, and then on the arrow or the text, not as a tinted background. Always keep the arrow, a sign or a word, so color is never the only signal. When the source already codes a change as good or bad, keep that coding on the arrow and the text: an increase in delays is bad although it points up. Removing it loses information.
 - A status in a table is a small dot or plain text in the status color, not a filled badge in every row. Reserve a filled badge for the one state that needs action.
 
 ## Supporting stats are label and value
@@ -95,7 +95,7 @@ A comparison such as `24 min vs avg` or `+12.4%` does not need a colored pill.
 A group of secondary values shows label and value and nothing else:
 
 - Label at caption size in the secondary tone, value at a medium size in the primary tone. No ring, bar or sparkline per item unless it adds a fact.
-- One optional icon per item, bare, following `unslop-surfaces`. On a work view, usually none.
+- One optional icon per item, bare, following `unslop-surfaces`. Keep it where the source had one, replaced by the set's icon. Add none the source did not have.
 - The same structure for every item in the group.
 
 ## Tables are set, not boxed
@@ -106,7 +106,8 @@ A table is the densest data display there is, and a generated one is a grid of b
 - **Alignment by type.** Text to the leading edge, numbers to the right on tabular figures, dates in one format. Headers align with their column.
 - **Header is quiet.** Caption size, secondary tone, sentence case, no fill.
 - **One primary column.** The identifying value of each row is in the primary tone at regular or medium weight. Everything else is regular in the secondary or primary tone. No bold column of numbers.
-- **Row actions on demand.** One trailing menu or hover actions, not three buttons in every row.
+- **Row actions on demand.** Not three buttons in every row. Show the one action people take most as a quiet text button, and put the rest behind a trailing menu. In static HTML the menu is a `details` element or a `popover`, with no script. When a row has two actions, show both. Every handler is kept.
+- **Draw one quantity per row.** Where each row carries a number that people compare, such as days late, percent complete or an amount against a limit, draw it beside the text as a small proportional bar or mark, scaled to the largest value in the column. The text value stays. Only values in the contract are drawn.
 - **Hover and selection** are a quiet fill step, the same one the rest of the interface uses.
 - **Empty and long values.** An empty cell shows a dash in the tertiary tone. A long value truncates with a way to read the whole.
 
@@ -119,8 +120,9 @@ For every chart that stays:
 - **One highlight.** The current or selected point takes the accent. Everything else takes one muted tone from the palette.
 - **Several series** take tones of one hue or a small set tuned to the same lightness and chroma, from `unslop-color`. Not the library's default rainbow.
 - **Round data ends consistently**: bar ends at 2 to 4, or fully round when the bars are narrow. Line joins round.
+- **Bars are slim, not pale.** A bar takes 40 to 60 percent of its slot, with the rest as gap. Never lighten a bar below 3:1 against its background to make a chart feel lighter. Thin it instead.
 - **Line weight** 1.5 to 2px for the main series, 1px for reference lines. Area fills fade toward the baseline.
-- **Show the value** of the highlighted point as text. A chart with no readable number is decoration.
+- **Show the value** of the highlighted point as text, and the axis labels needed to read the others. A chart with no readable number is decoration. When a kept chart has no values in the source, only shapes, draw it from the shapes, show no number and no placeholder, and list the missing values under **Needs data**.
 - **One chart style** across the product: the same axis treatment, the same tooltip, the same tones.
 
 ## Before you finish
@@ -141,7 +143,9 @@ For every chart that stays:
 | A filled status badge in every table row | A dot or text. Fill only the state that needs action |
 | A table with vertical lines, an outer border, or zebra striping plus row lines | Hairline row rules or padding alone |
 | Numbers in a table aligned left or centered, or without tabular figures | Right-aligned, tabular |
-| Two or more buttons repeated in every table row | One menu, or actions on hover |
+| Three or more buttons repeated in every table row | The most used one as text, the rest in a `details` or `popover` menu |
+| Chart bars lightened below 3:1 to look quiet, or full-width bars that read as blocks | Slim bars at 40 to 60 percent of the slot, in a tone that passes |
+| A comparable number in every row shown only as text | Draw it as a small proportional bar beside the text |
 | Gridlines, a plot border or a legend on a single-series chart | Remove them and label directly |
 | The chart library's default colors | The palette's chart tones |
 | Charts on one product with different axis and tooltip styles | One chart style |

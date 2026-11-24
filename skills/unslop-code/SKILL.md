@@ -27,6 +27,8 @@ Before changing anything, establish:
 
 Work on a branch. If the working tree has uncommitted changes that are not yours, leave them alone and say so.
 
+A single static file with no repository and no build is the exception: write the result as a new file beside the source, and skip the steps about tokens, typecheck, lint and tests. An inline style that carries data, such as a bar's width, stays inline.
+
 ## 2. Write the contract from the code
 
 For each element, record where its content comes from: a prop, a query field, a store value, a translation key, a literal. Record every handler and link with its target. Record the states the code branches on: loading, empty, error, selected.
@@ -103,7 +105,8 @@ When the source is an image and there is no code or Figma file:
 3. **Build the result, not the source.** Do not recreate the original first. Go from the contract and the brief straight to the restyled screen.
 4. **Deliver one self-contained file** unless a stack was requested: a single HTML file with inline CSS, real text, inline SVG for the hero, system-safe font loading. No build step, no external images. Size it to the source's dimensions and center it on a neutral page.
 5. **Mark sample data as sample.** The values are the screenshot's. Name them as props or constants at the top so they can be wired later.
-6. **Crop the images, never redraw them.** A logo, an avatar, a photo or a product shot is content. Crop it from the screenshot, embed it in the file, and report it as a low-resolution stand-in to be replaced with the real asset. Do not retype a logo in a similar font or generate a replacement image.
+6. **Fetch the icons, never draw them.** Icons come from one published open-source set as real SVG files, inlined in the file. The sets and how to fetch them are in `unslop-surfaces`.
+7. **Crop the images, never redraw them.** A logo, an avatar, a photo or a product shot is content. Crop it from the screenshot, embed it in the file, and report it as a low-resolution stand-in to be replaced with the real asset. Do not retype a logo in a similar font or generate a replacement image.
 
 The same approach applies when Figma can be read and not written.
 

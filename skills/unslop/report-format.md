@@ -28,6 +28,7 @@ What the user reads after the work. Lead with where the result is, then why it l
 **Needs data.** `invoice.dueDate` for 3 rows: the due column shows a marked placeholder.
 **Assumed.** The Reports view holds the revenue chart (the source links to it with `View all`; not visible in a screenshot).
 **Proposed, not applied.** Merging `Analytics` into `Reports` in the sidebar (code change to navigation).
+**Added.** <interface text, icon set and fonts the result has and the source did not: group headings, accessible names, the icon set with its licence>
 **Not done.** <passes skipped and why>
 **Not verified.** <checks that could not be run>
 ```

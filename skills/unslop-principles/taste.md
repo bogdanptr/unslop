@@ -19,6 +19,8 @@ Where a reference breaks an explicit rule in a pass skill, the rule wins. The re
 | Navigation floats | The bar is its own surface, inset from the edges, with a quiet capsule on the current item | It does not touch the screen edges | `unslop-surfaces`, `unslop-navigation` |
 | Small, exact details | Icons of one weight, even gaps, one label style. Nothing is loud except the one figure and the one color region | Zoom to 200 percent on any corner: it holds | `unslop-principles` |
 
+These qualities are not limited to consumer or mobile screens. On a dashboard or a form the colored region is the header band, the strong figure is the lead number in it, and the depth is the working surface sitting on the page.
+
 ## How to use it
 
 - After `unslop-direction` writes the brief, read the table once. If the brief contradicts a quality without a reason from the product, reconsider that dial.

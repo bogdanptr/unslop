@@ -173,6 +173,7 @@ Each skill works on its own. The orchestrator is the reason to install all of th
 - **Lose things silently.** Whatever is cut, merged or moved appears in the ledger with where it went.
 - **Edit your original.** Figma work goes on a copy, code work on a branch.
 - **Touch behavior.** No changes to data fetching, state, routing or logic.
+- **Draw icons from memory.** Icons come from one open-source set (Tabler, Lucide, Heroicons, Phosphor, Material Symbols or Iconoir), as real files.
 - **Override a brand.** Documented colors and typefaces are fixed. The direction works around them.
 
 ## Subagents

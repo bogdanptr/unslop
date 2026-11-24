@@ -49,7 +49,7 @@ A neutral page can carry a soft wash of the accent or brand hue where the view a
 
 - The accent at 8 to 12 percent over the page color, as a solid computed value.
 - It starts at the top edge, or behind the focal object, and fades to the plain page color within 40 to 50 percent of the first viewport. A radial shape wider than the screen fades more evenly than a linear one.
-- One wash per view. It never sits behind a table, a form or running text.
+- One wash per view. It never sits behind a table, a form or running text. On a work or form view it belongs to the page header band, behind the title and the lead figure, and ends before the working surface starts.
 - Text over it is measured like any other background. At this strength the page's text tones still pass.
 
 ## Build a gradient like real light
@@ -77,7 +77,7 @@ Sample, do not invent. With the background built:
 | `on-accent` | The darkest stop, or the near-white, whichever measures higher against the accent |
 | `hairline` | Primary text at 8 to 12 percent |
 | `border-field` | Primary text at 12 to 20 percent, or whatever reaches 3:1 against the surface for an input's edge |
-| Chart tones | One muted tone 10 to 15 percent from the background behind the chart, the accent for the highlight, and for several series a set at one lightness and chroma |
+| Chart tones | One muted tone that still reaches 3:1 against the background behind the chart, which on a light page is the text color at about 45 to 55 percent. The accent for the highlight. For several series, a set at one lightness and chroma |
 
 Never pure `#000` or `#FFF` on a colored background. The near-white and near-black above look cleaner because they share the scene's light.
 
@@ -88,10 +88,10 @@ Gray with zero chroma looks dead beside any color. Every neutral carries the bac
 ## One accent, used for one thing
 
 - **One accent hue.** It marks the primary action and, at most, the current or selected data point.
-- **It covers little.** Roughly a tenth of the screen or less, and on a work view far less: the primary button, the focus ring, the selected state. If it is everywhere, nothing is primary.
+- **It covers little.** Roughly a tenth of the screen or less, and on a work view far less: the primary button, the focus ring, the selected state. If it is everywhere, nothing is primary. A field, a bleed or a wash is the background of one region and is not counted here: the tenth is for accent-colored elements on the neutral page.
 - **Links are not automatically the accent.** In running text a link is the text color with an underline, or the accent where links are few.
 - **No rainbow metrics.** Four stats in four hues with no meaning behind the hues become four stats in the text color. If the hues do encode categories, keep the categories and retune each to the palette's lightness and chroma.
-- **Fill, not text.** The primary action is a solid accent fill. Accent-colored text on a neutral button reads as a link.
+- **Fill, not text.** The primary action is a solid accent fill. Accent-colored text on a neutral button reads as a link. On a field the rule inverts, as **When the accent is a field** describes.
 
 ## A bleed joins the color to the page
 
@@ -102,6 +102,7 @@ The strongest way to place a brand color on a focus, marketing or flow view is t
 - Text and controls in the colored part follow **When the accent is a field**. Below the fade they follow the page's roles. Nothing with small text sits in the middle of the transition unless it is on its own surface.
 - A content surface sits across the transition, so the color and the page are tied together by an object instead of a line.
 - A bleed, a field on one object and a wash are three strengths of the same idea. A view uses one of them.
+- Which one: a bleed where the top of the view is the focal region, as on focus and marketing views. A field where the full-strength place is a bounded object or band, such as the page header of a work view or a summary card on a form. A wash where the brand color is too strong to sit behind text, or the view is used for hours and a solid band would tire.
 
 ## Near-black is the second emphasis
 

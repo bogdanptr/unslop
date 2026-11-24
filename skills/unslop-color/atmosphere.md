@@ -27,7 +27,7 @@ Near-white text passes 4.5:1 on every stop of Night, Deep water, Forest and Embe
 
 On Paper, the text measures 16.1:1, the secondary text 5.1:1 and the accent 4.9:1 against the page.
 
-Add a light grain to Paper and Ink. Keep Studio clean.
+Add a light grain to Paper and Ink on focus and marketing views. On work and form views keep them flat. Keep Studio clean.
 
 ## Worked example: a palette from Dawn
 

@@ -28,7 +28,7 @@ The format and the rules for cutting are in [content-contract.md](content-contra
 | `reskin` | Look only. Same elements, same order of sections, same labels, same navigation. | "Keep everything, just restyle", production screens with fixed scope. |
 | `audit` | Nothing. Runs steps 1 to 3 and reports. | "Why does this look AI-made?" |
 
-State the mode in the first line of the report. When the request does not say, use `full` on a Figma copy or a new branch, and `reskin` when editing production code in place.
+State the mode in the first line of the report. When the request does not say, use `full` whenever the result is written to a copy: a Figma copy, a new branch or a separate output file. Use `reskin` when editing production code in place.
 
 ## 1. Take the screen in
 
@@ -67,12 +67,15 @@ Structure comes before skin. A palette applied to the wrong layout is repainted 
 | 5 | Color | `unslop-color` | Is the background a decision, and does every color come from it? | No |
 | 6 | Navigation | `unslop-navigation` | Fewer destinations, clearer names? | Yes, restyle only |
 | 7 | Finish | `unslop-surfaces`, **The material goes on last** | Is the brief's material applied the same way everywhere? | No |
+| 8 | Premium bar | `unslop-principles`, **Correct is not finished** | The result is correct. Is it also something worth looking at? | No, limited to what styling can add |
 
 Run every pass even when its domain looked fine in the diagnosis. A pass that changes nothing says so in one line. A pass whose domain is absent, such as figures on a settings form or navigation in a dialog, is skipped with one line saying why.
 
 Every pass is judged by `unslop-principles`. When a pass rule and a principle disagree for this screen, the principle wins and the report says so.
 
-After each pass, look at the result before starting the next: a Figma screenshot, a browser screenshot, or a re-read of the diff when neither exists.
+After each pass, look at the result before starting the next: a Figma screenshot, a browser screenshot, or a re-read of the diff when neither exists. When the whole result is one new file, passes may be written together, and then there are three renders at least: after the structure (passes 1 to 3), after the finish (pass 7) and after the premium bar (pass 8). Each render is looked at and its problems fixed before going on.
+
+Pass 8 is not optional and is not a review. It changes the result. A restyle that is tidy and plain has not finished.
 
 ## 6. Verify with fresh eyes
 
@@ -106,3 +109,5 @@ If an owning skill is not installed, say so, skip that pass and list it under **
 | A work view, form or table given a gradient background, glass or a large hero | The brief ignored the kind of screen. Go back to `unslop-direction` |
 | Every screen of a product restyled as if it were a landing page | Set the strength per kind of screen |
 | "Looks premium" in the report with no screenshot looked at | Look at the render, or say it is unverified |
+| The report itself calls the result plain, safe or generic | That is pass 8 not done. Go back and do it |
+| Pass 8 skipped because the view is a dashboard, a form or a table | Every kind of view gets it. The brief's `Strength:` line says where |

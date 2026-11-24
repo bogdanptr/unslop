@@ -32,9 +32,9 @@ The kind sets how much expression the view can carry and where the idea can live
 | Kind | Examples | Time spent | Expression |
 | --- | --- | --- | --- |
 | **Focus** | A summary, a home screen, a detail view built around one figure or object | Seconds, often | High. The background and the main figure can both carry the idea |
-| **Work** | Dashboards, tables, admin panels, editors, inboxes | Hours | Low. The idea lives in type, figures and the accent. The background is quiet |
-| **Form** | Settings, checkout, sign-up, a composer | Minutes, with attention on input | Low. The idea lives in type, spacing and the controls |
-| **Collection** | Feeds, galleries, search results, catalogs | Minutes, scanning | The content supplies the color. The interface steps back |
+| **Work** | Dashboards, tables, admin panels, editors, inboxes | Hours | Concentrated. The working surface stays flat and dense. The page header, the lead figure and the details carry the idea |
+| **Form** | Settings, checkout, sign-up, a composer | Minutes, with attention on input | Concentrated. The fields stay plain. The header, the controls and one summary object carry the idea |
+| **Collection** | Feeds, galleries, search results, catalogs | Minutes, scanning | The content supplies the color. The item and the header carry the idea |
 | **Marketing** | Landing pages, pricing, an empty-state or onboarding hero | Seconds, once | High. Large type, real product imagery, one strong composition |
 | **Flow** | Onboarding steps, a wizard, a confirmation | Seconds per step | Medium. One thing per step. Consistency across steps matters most |
 | **Overlay** | Dialogs, sheets, menus, popovers | Seconds | It takes the direction of the view behind it and adds nothing |
@@ -91,22 +91,38 @@ The signature is the thing a viewer would describe afterwards. One per product, 
 
 The dials must agree. A warm dawn atmosphere with a cold blue accent and a brutalist mono typeface is three ideas.
 
-Quiet is a valid setting for every dial, and the right one more often than not. Do not put a sunset behind a spreadsheet, a glass card over a settings form or an illustration on a table.
+Quiet is the right setting for the working surface itself: do not put a sunset behind a spreadsheet, a glass card over a settings form or an illustration on a table. Quiet is never the setting for the whole view. See **Every view has one place at full strength**.
 
-## Quiet is not timid
+## Every view has one place at full strength
 
-The kind of screen sets a ceiling on expression. On focus, marketing and flow views it also sets a floor. A restyle that only tidies such a view, with better spacing, fewer borders and a calmer palette, is a cleaner version of the generic screen and not a design.
+Tidy is not the goal. A restyle that only fixes spacing, removes borders and calms the palette gives a cleaner version of the generic screen. It passes every rule and nobody would look at it twice. That result is a failure on any kind of screen, a dashboard as much as a landing page.
 
-On those kinds, one object carries the idea at full strength and everything around it stays quiet:
+So every view, whatever its kind, has one place where the idea is at full strength, and the rest stays quiet around it. The kind of screen decides where that place is and how large it may be. It never decides whether there is one.
 
-- **Choose the object.** It is the focal point `unslop-layout` names: the main figure, the headline block, the item being shown.
-- **Give it the brand or accent color as a field**, not as a trim. A balance on a card in the brand color, a headline on a full-bleed block. The page around it stays neutral. How color behaves on a field belongs to `unslop-color`.
-- **Give it something from the subject**: a form, a texture or a material that this product has and another would not. Engraved line work for money, contour lines for terrain, a ruled grid for an instrument, a paper edge for a document. The recipe is in `unslop-surfaces`.
-- **Set its largest text in the display face** when the brief has one.
+| Kind | Where full strength goes | What stays plain |
+| --- | --- | --- |
+| Focus | The focal object and the region around it: a field or a bleed of the brand color, the subject's own form, display figures | Supporting groups |
+| Work | The page header band and the lead figure in it: display-size figures, a wash or a field behind the header only, and one visual drawn from the row data itself, such as a delay shown as a proportional bar | The table, list or canvas. Flat, dense, no color behind it |
+| Form | The header and one summary object, such as the plan or order being edited shown as a card in the brand color. Controls drawn as one considered family | The fields |
+| Collection | The item: its crop, caption and selected state. A header with a wash | The chrome around the items |
+| Marketing | The headline block and the product shown for real | Secondary sections |
+| Flow | A recurring composition or progress device shared by every step | The step's inputs |
 
-Strength is concentrated, never spread. One object at full strength reads as confident. Three at medium strength read as busy.
+On every kind, full strength is made from the same four things:
 
-Write it in the brief as one more line: `Strength: the forecast header. The sky as a field, the day's temperature curve, large light figures. Everything below it on plain surfaces.` On work, form and collection views the line is `Strength: none. The idea is in the type and the figures.`
+- **Color as a field.** The brand or accent color fills one object or one band, at full strength or as a wash, instead of appearing only as trim. How color behaves there belongs to `unslop-color`.
+- **Something from the subject.** A form, a pattern or a visual that this product has and another would not: engraved line work for money, a route for a shipment, a ruled grid for an instrument, a paper edge for a document. The recipes are in `unslop-surfaces` and `unslop-dataviz`.
+- **A display treatment.** The lead figure or title is large and set in the display face when the brief has one.
+- **Depth and detail.** The surface that matters sits on the page with soft depth, icons come from one drawn set, and every state is designed.
+
+Strength is concentrated, never spread. One place at full strength reads as confident. Three at medium strength read as busy. On a work view the table itself never becomes the decorated thing.
+
+Write it in the brief as one more line, and never as "none":
+
+- Focus: `Strength: the forecast header. The sky as a field, the day's temperature curve, large light figures. Everything below it on plain surfaces.`
+- Work: `Strength: the page header. The overdue total at display size on a wash of the stamp red, each row's days overdue drawn as a bar. The table itself stays on plain paper.`
+
+The swap test is the check. If the finished view would work unchanged for a product in another category, the strength line was not carried out.
 
 ## 6. Write the brief
 
@@ -123,6 +139,7 @@ Signature: amounts set in a mono with tabular figures, right-aligned, overdue on
 Type voice: a grotesque for interface text, its matching mono for every figure
 Material: paper. Hairline rules between rows, no cards
 Accent source: the red of an overdue stamp, used only on overdue amounts and the one primary action
+Strength: the page header. The overdue total at display size on a wash of the stamp red, each row's days overdue drawn as a bar. The table stays on plain paper
 
 Avoid: stat cards with tinted icon tiles, indigo accent on gray-50, a card around every section
 ```
@@ -140,6 +157,7 @@ Signature: the day's temperature drawn as one curve, with the current hour marke
 Type voice: soft geometric sans, large figures at light weight
 Material: glass over the sky, one level, no borders
 Accent source: the warmest stop of the sky, used on the current hour and the one primary action
+Strength: the forecast header. The sky as a field, the temperature curve, large light figures. Everything below it on plain surfaces
 
 Avoid: an icon and a number in a card, an indigo accent on navy, tinted icon tiles
 ```
@@ -157,7 +175,8 @@ For several screens, write one brief. The atmosphere may shift between screens w
 | "Clean", "modern", "minimal", "premium" or "sleek" in the brief | Replace each with the decision it was standing in for |
 | An atmosphere chosen because it looks good, with no link to the subject | Say what it stands for, or choose a quiet neutral |
 | A gradient or image atmosphere on a work, form or collection screen | A quiet tinted neutral. Put the idea in the signature and the type |
-| A focus, marketing or flow view with no `Strength:` line, or with nothing at full strength | Choose the focal object and give it the field, the subject's detail and the display face |
+| A view of any kind with no `Strength:` line, or one that says none | Name the place, then give it the field, the subject's detail and the display treatment |
+| A finished view that would work unchanged for another category of product | The strength line was not carried out. Go back to it |
 | Full strength on more than one object in a view | Keep it on the focal object and quiet the rest |
 | A brand color that exists and appears only as small trim on a focus view | Use it as a field on the focal object |
 | Glass as the material on a screen with a flat background | Flat, matte or paper |

@@ -35,7 +35,7 @@ The brief names the view's job as a question. One region answers it. That region
 
 The squint test checks it: blur the view or shrink it to a thumbnail, and one region clearly dominates, with two or three quieter groups around it. Four regions of equal weight is the template look.
 
-The focal point is not in a card like the others. A figure, a table or a headline inside the same bordered box as everything else is one more tile. The exception is the full-strength object `unslop-direction` names on a focus or marketing view: there the focal point may be an object in its own right, such as a balance on a card, as long as nothing else on the view shares its treatment.
+The focal point is not in a card like the others. It may be the one raised surface on the page, such as the working table of a dashboard, when nothing else shares that treatment. A figure, a table or a headline inside the same bordered box as everything else is one more tile. The exception is the full-strength object `unslop-direction` names on a focus or marketing view: there the focal point may be an object in its own right, such as a balance on a card, as long as nothing else on the view shares its treatment.
 
 A figure and the actions taken on it belong together. Put the two or four actions that act on the focal figure inside or directly against its object, so the figure and what you do with it read as one thing.
 
@@ -136,6 +136,15 @@ Its label and its restyling belong to `unslop-navigation` and `unslop-surfaces`.
 
 The top of a view orients: a title or a date, a way back, the controls that scope what is shown, the account. One row on a phone. On desktop, one page header with the title leading and actions trailing. No title that repeats the selected navigation item, and no welcome banner above the work.
 
+## The first viewport is composed
+
+Cutting and regrouping can leave a view that is correct and lopsided: the content ends halfway down a desktop screen, or two small groups sit alone under a wide table.
+
+- Lay the view out for the viewport it will be seen in. On desktop, secondary groups go beside the focal region in a narrower column before they go under it.
+- When the content still ends short, give the space to the focal region: a taller header band, more room around the lead figure, larger charts. Do not stretch rows or add items.
+- Groups that sit side by side share a top edge and, where their content allows, a height.
+- Empty space is fine when it is around the focal point on purpose. It is a defect when it is what was left over.
+
 ## It holds at other widths
 
 A restyle that only works at the width of the source is half done.
@@ -171,5 +180,6 @@ A restyle that only works at the width of the source is half done.
 | Text or controls closer than 16 to the screen edge | Bring them inside the margin |
 | An element placed over a group, with text in the group able to reach it when a label grows | Reserve the clearance as padding inside the group |
 | A fixed height on a box that holds text | A minimum height |
+| On desktop, the content ends above the middle of the first viewport with groups stacked in one column | Move secondary groups beside the focal region, or give the focal region the room |
 | A row of equal labeled buttons whose longest label fills its button | Give it room for a third more: fewer columns, smaller gaps, or the label under a wider cell |
 | A focal figure in one place and its actions in another group | Bring the actions into or against the figure's object |

@@ -41,7 +41,7 @@ Charts list their data: how many points, what each axis is, which point is highl
 - **Missing data is marked, not faked.** When a new figure needs a value the source lacks, such as a start time for a span, build it with a clearly marked placeholder, list it under **Needs data** and name the field it expects.
 - **Actions keep their destination.** A restyled button calls the same handler. A renamed tab opens the same route.
 - **States survive.** If the source has an empty or error state, the result has one in the new style. A state the source never had is not yours to add; list it as missing.
-- **Images and logos are kept.** Crop, mask and place them freely. Do not replace, regenerate or recolor a logo.
+- **Images and logos are kept.** Crop, mask and place them freely. Do not replace, regenerate or recolor a logo. A logo is an image or vector asset, or a mark a brand document names. An emoji or a stock glyph on a default gradient tile beside the product name is a placeholder: set the product name as a wordmark in the brief's type voice, remove the tile, and list it under **Assumed**.
 
 ## Dispositions
 
@@ -67,7 +67,7 @@ Cutting is how a screen gets a focus, and it is the riskiest thing this skill do
 
 Anything bound to live data with no other home is never cut. Demote it behind a disclosure, a detail view or a "See all" row instead.
 
-In code, a `cut` or `demote` of anything with a data binding or a handler is proposed in the report and applied only when the user asked for a full rework or approves it. In a Figma copy, apply it and list it.
+In code, a `cut` or `demote` of anything with a data binding or a handler is proposed in the report and applied only when the user asked for a full rework or approves it. A hardcoded literal with no handler is not bound: when it is filler it is cut, and the ledger says so. In a static mock every string is a literal, so judge by what the string is: names, numbers, dates and row values are sample data and stay. A sentence that carries no data and leads to no action is filler. In a Figma copy, apply it and list it.
 
 ## The ledger
 

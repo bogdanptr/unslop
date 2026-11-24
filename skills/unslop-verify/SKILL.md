@@ -46,7 +46,8 @@ Re-run the first read, the squint test and the swap test from `unslop-diagnose` 
 
 - **Old tells that survived.** Every tier 1 tell from the diagnosis must be gone. Tier 2 and 3 tells that remain are findings.
 - **New tells introduced.** A restyle can swap one default for another: glass on everything, a sunset behind a spreadsheet, an overline on every label, a new ring. Report these the same way.
-- **Only tidier.** Put the source and the result side by side at thumbnail size. If the result is the same screen with better spacing and calmer colors, on a focus, marketing or flow view, it is a finding against `unslop-direction`, **Quiet is not timid**: nothing is at full strength.
+- **Only tidier.** Put the source and the result side by side at thumbnail size. If the result is the same screen with better spacing and calmer colors, on any kind of view, nothing is at full strength. That is a blocker, not a finding: the owner is `unslop-direction`, **Every view has one place at full strength**.
+- **The premium bar.** Run the list in `unslop-principles`, **Correct is not finished**. Each line that is not done and has no reason from the product is a finding. Three or more is a blocker.
 - **The swap test.** If the result would still work unchanged for a product in another category, the direction did not reach the signature or the atmosphere. That is a finding against `unslop-direction`.
 
 ## 3. Is it one design
@@ -56,7 +57,7 @@ Check the result against the direction brief:
 | Check | Finding when |
 | --- | --- |
 | Every color traces to a role | A color with no role, or a leftover from the old palette |
-| One accent hue, on the primary action and at most one data highlight | The accent appears elsewhere, or a second accent exists |
+| One accent hue: as the field, bleed or wash of one region, on the primary action and on at most one data highlight | A second accent hue, or the accent on more than four elements outside its region |
 | At most two type families and five sizes | More |
 | Large text is light, small text is not | 40px or more at 600 or heavier outside the Graphic direction, or under 18px below 400 |
 | One radius family and one corner language | More than three radius values, or pills and circles mixed with rounded rectangles |
@@ -105,7 +106,7 @@ Measured: <pairs with ratios>
 Not verified: <checks that could not be run, and why>
 ```
 
-`Ship` means no blockers, every tier 1 tell gone and nothing in the result that the brief's **Avoid** line names. `Fix first` otherwise. A pattern from the catalog that the brief's atmosphere or subject explains, such as a violet evening sky in a weather app, is not a surviving tell: say so in one line and move on.
+`Ship` means no blockers, every tier 1 tell gone, nothing in the result that the brief's **Avoid** line names, and the brief's `Strength:` line visible in the result. A correct and plain result is `Fix first`. `Fix first` otherwise. A pattern from the catalog that the brief's atmosphere or subject explains, such as a violet evening sky in a weather app, is not a surviving tell: say so in one line and move on.
 
 Counting rules, so two readers get the same answer: a unit span sized relative to its figure does not count as a type size. Fully round shapes count as a corner language, checked separately: a view mixes pills or circles with rounded rectangles only where a shape is round by nature, such as a status dot. The device frame does not count as radius values. The hero's own marks may carry the accent and do not count as the one data highlight. Order rows with blockers first, then findings by how visible they are. Cap findings at ten. Never cap blockers.
 

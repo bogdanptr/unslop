@@ -55,11 +55,11 @@ The Graphic direction is the exception: its one display line stays heavy by desi
 
 ## Few sizes, wide steps
 
-Use at most five sizes in a view, each at least 1.2 times the one below, with a bigger jump to the largest. The set depends on the kind of screen the brief names:
+Use at most five sizes in a view, with a bigger jump to the largest. From the heading size upward each size is at least 1.2 times the one below. The small sizes may sit closer, since 11, 13 and 15 are all needed on a dense view: there the minimum step is 2px. The set depends on the kind of screen the brief names:
 
 | Role | Focus, phone | Work and form, desktop | Marketing | Line height | Tracking |
 | --- | --- | --- | --- | --- | --- |
-| Display: main figure or headline | 56 to 72 | 28 to 36, only where one figure leads | 56 to 96 | 1.0 to 1.1 | -0.02em, to -0.03em above 72 |
+| Display: main figure or headline | 56 to 72 | 36 to 48 for the lead figure in the page header, at 300 or 400 | 56 to 96 | 1.0 to 1.1 | -0.02em, to -0.03em above 72 |
 | Title | 24 to 28 | 20 to 24 | 32 to 40 | 1.2 | -0.01em |
 | Heading or large value | 17 to 20 | 15 to 16, medium weight | 20 to 24 | 1.3 | 0 |
 | Body, labels, table cells | 14 to 15 | 13 to 14 | 17 to 20 | 1.4 to 1.6 | 0 |
@@ -87,7 +87,7 @@ These strengths are for flat backgrounds. Over a gradient or glass the secondary
 
 A label and its value differ by tone and size. They do not also need different weights.
 
-On a work view, where sizes barely differ, weight does more: medium for the one thing that identifies a row or a section, regular for everything else. Two weights, used for one distinction each.
+On a work view, where sizes barely differ, weight does more: medium for the one thing that identifies a row or a section, regular for everything else. Two weights in the working surface, used for one distinction each. The lead figure in the header is display text and follows the weight-by-size table.
 
 ## One overline style, used once or twice
 
@@ -101,7 +101,7 @@ Set uppercase with `text-transform`, or Figma's case setting, never by retyping 
 - **Negative tracking only on large text.** -0.02em at 40px and up, -0.01em at 24 and up, none below.
 - **Sentence case** for labels and buttons unless the product's voice documents otherwise. Uppercase or lowercase set with a transform is styling. Turning `Open Tasks` into `Open tasks` edits the string, so it is a `relabel` and belongs to `unslop-navigation`: allowed in `full` mode, recorded in the ledger, never applied to data.
 - **No gradient text.** A figure filled with the accent gradient is a tell. Solid color.
-- **No emoji standing in for icons.** Replace an emoji bullet with an icon from the screen's set, or with nothing. Emoji inside user-written content stay.
+- **No emoji standing in for icons.** Where the emoji carried meaning, such as a navigation item, a stat or a status, replace it with an icon from the screen's one drawn set, following `unslop-surfaces`. Where it was only decoration, such as a wave after a greeting or a sparkle on a button, remove it. Emoji inside user-written content stay. Deleting every emoji and adding no icons leaves a view barer than the source.
 - **Balance short headings** with `text-wrap: balance`. Never center text that runs past two lines.
 - **No dot separators.** A middle dot or bullet between short facts on one line, such as `Instant · Free · Secure`, is a default way to avoid deciding how the facts relate. Give each fact its own item with a gap of 12 to 16 between them and an icon where one helps, stack them as a short list, or put them in separate cells. A dot stays only inside one compound value, such as a time and a date in a table cell, and in breadcrumbs or metadata the product's own style documents. Removing the dot is styling, not a relabel: each fact's string is unchanged.
 - **Real punctuation** in interface strings you are allowed to touch: `…` for three dots, an en dash in ranges. Data values are never retyped.

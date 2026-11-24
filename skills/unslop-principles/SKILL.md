@@ -93,6 +93,27 @@ The difference between good and premium is the last tenth: the states nobody ask
 
 **Test.** Pick the least important element on the screen and look at it closely. It was considered too.
 
+## 13. Correct is not finished
+
+A view can pass every test above and still be plain. Plain is a defect. The last pass on any view asks what a designer with one more day would add, and adds it, without inventing content.
+
+**Test.** Go down this list. Each line is done, or there is a reason from the product why it does not apply:
+
+| The premium bar | Done when |
+| --- | --- |
+| One place at full strength | The brief's `Strength:` line is visible in the result at a glance |
+| Something only this product has | A form, pattern or visual taken from the subject is on screen. The swap test fails |
+| A lead figure or title with presence | It is at display size, at least twice the next text, with open space around it |
+| Color used as a field somewhere | The accent or brand color fills one object or band, not only buttons and links |
+| Icons from one published set | Real files from one open-source set, no emoji, no hand-drawn paths, no missing icons where the source had them. Same stroke, same size |
+| Data shown, not only listed | Where rows carry a quantity, at least one is drawn: a proportional bar, a progress mark, a small trend. Only from values in the contract |
+| Depth in two soft levels | The surface that matters sits on the page with a soft shadow or a clear fill step |
+| No dead space | The first viewport is composed. No half-empty page under the content, no orphaned group in a corner |
+| States designed | Hover, selected, focus, empty and loading exist in the new style where the source had them |
+| Details at 200 percent | Zoom into any corner. Alignment, gaps and radii hold |
+
+Owner: this skill runs the list as the last pass of `unslop`. Each line is fixed by the pass skill that owns its subject.
+
 ## What premium means, in decisions
 
 The qualities the author of this collection treats as good taste, each with a check, are in [taste.md](taste.md). Use them as the tiebreaker when the rules leave a choice open.
@@ -131,3 +152,6 @@ The qualities the author of this collection treats as good taste, each with a ch
 | An icon or shape that is centered by numbers and looks off | Nudge it by eye |
 | A layout that breaks with a long name, an empty list or a large number | Fix it, then take the test content back out |
 | One polished region beside untouched default ones | Finish the rest |
+| A result that passes every rule and that nobody would look at twice | Run **Correct is not finished** and do what it finds |
+| Emoji deleted and nothing put in their place where they carried meaning | Icons from one drawn set |
+| A quantity in every row shown only as text | Draw one of them, from the contract values |

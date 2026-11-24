@@ -17,7 +17,7 @@ In Claude Code with this repository installed as a plugin, the roles ship as age
 
 - **The auditor and the content contract.** Neither depends on the other.
 - **Screen workers on different screens**, after the direction and the shared tokens are locked. Two workers never touch the same Figma frame or the same file.
-- **Nothing inside one screen.** The seven passes edit the same nodes. Run them in order in one context.
+- **Nothing inside one screen.** The passes edit the same nodes. Run them in order in one context.
 
 For a multi-screen job, do one screen yourself first. Its result fixes the direction, the tokens and the signature. Hand those to the workers as part of their brief, so five screens come back as one product and not five interpretations.
 
