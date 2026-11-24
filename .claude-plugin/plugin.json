@@ -1,0 +1,10 @@
+{
+  "name": "unslop",
+  "description": "Skills that turn any AI-generated interface - dashboards, forms, landing pages, mobile screens - into a distinctive, premium one while keeping its content and data: principles, diagnose, direction, layout, surfaces, figures, typography, color, navigation and verify.",
+  "version": "0.2.3",
+  "author": {
+    "name": "Bogdan Petrescu"
+  },
+  "repository": "https://github.com/bogdanptr/unslop",
+  "license": "MIT"
+}

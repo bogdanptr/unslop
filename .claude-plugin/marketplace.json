@@ -1,0 +1,14 @@
+{
+  "name": "unslop",
+  "description": "Agent skills that restyle AI-generated screens into premium ones, content intact.",
+  "owner": {
+    "name": "Bogdan Petrescu"
+  },
+  "plugins": [
+    {
+      "name": "unslop",
+      "source": "./",
+      "description": "Skills that turn AI-generated screens into distinctive, premium ones while keeping their content and data."
+    }
+  ]
+}

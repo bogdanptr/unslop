@@ -1,0 +1,3 @@
+interface:
+  display_name: "Unslop: Figma"
+  short_description: "Read a Figma frame and write the restyle as a copy"

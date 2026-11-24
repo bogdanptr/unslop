@@ -1,0 +1,3 @@
+interface:
+  display_name: "Unslop: Diagnose"
+  short_description: "Find what makes a screen look AI-generated"

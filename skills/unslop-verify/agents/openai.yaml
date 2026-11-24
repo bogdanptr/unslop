@@ -1,0 +1,3 @@
+interface:
+  display_name: "Unslop: Verify"
+  short_description: "Check a restyle kept everything and lost the slop"
